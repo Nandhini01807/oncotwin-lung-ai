@@ -210,3 +210,5 @@ python test_samples.py
 
 > **Clinical Disclaimer:**  
 > *"This AI system is intended solely for clinical decision support and research. It detects suspicious pulmonary nodules from chest CT images using a Deep Learning model and provides confidence scores with Grad-CAM visual explanations. The AI does not diagnose lung cancer, assign TNM classification, determine cancer stage, or prescribe treatment. Final clinical decisions remain the responsibility of the attending physician."*
+#   o n c o t w i n  
+ 
