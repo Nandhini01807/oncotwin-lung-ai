@@ -1,0 +1,63 @@
+{
+  "dataset_name": "Kaggle Multi Cancer Dataset (2D Medical Images)",
+  "dataset_source": "Kaggle Multi Cancer Dataset",
+  "license": "Open Research Dataset",
+  "modality": "2D Medical Images (Histopathology Scans)",
+  "cancer_type": "Multi Cancer (Lung Category)",
+  "classes": [
+    "lung_bnt",
+    "lung_aca",
+    "lung_scc"
+  ],
+  "class_mapping": {
+    "lung_bnt": {
+      "label": "Benign (Normal Lung Tissue)",
+      "type": "Benign",
+      "idx": 0
+    },
+    "lung_aca": {
+      "label": "Malignant (Lung Adenocarcinoma)",
+      "type": "Malignant",
+      "idx": 1
+    },
+    "lung_scc": {
+      "label": "Malignant (Lung Squamous Cell Carcinoma)",
+      "type": "Malignant",
+      "idx": 2
+    }
+  },
+  "samples_trained": 420,
+  "samples_val": 90,
+  "samples_test": 90,
+  "model_architecture": "DenseNet121 (Transfer Learning CNN + Fine-Tuning)",
+  "metrics": {
+    "test_accuracy": 93.33,
+    "precision": 93.31,
+    "recall": 93.33,
+    "f1_score": 93.25,
+    "roc_auc": 98.63,
+    "confusion_matrix": [
+      [
+        30,
+        0,
+        0
+      ],
+      [
+        2,
+        26,
+        2
+      ],
+      [
+        0,
+        2,
+        28
+      ]
+    ]
+  },
+  "training_timestamp": "2026-09-03 14:39:12 UTC",
+  "known_limitations": [
+    "Trained on Kaggle Multi Cancer Dataset 2D image categories.",
+    "Clinical Decision Support System: The AI predicts cancer class and confidence score only.",
+    "The attending doctor manually assigns the official clinical stage after reviewing predictions and clinical findings."
+  ]
+}

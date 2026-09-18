@@ -1,0 +1,14 @@
+{
+  "scanType": "Brain MRI",
+  "modelArchitecture": "DenseNet121 Transfer Learning CNN",
+  "accuracy": 48.89,
+  "precision": 73.57,
+  "recall": 48.89,
+  "f1Score": 45.55,
+  "classes": [
+    "Brain Glioma Tumor",
+    "Brain Meningioma Tumor",
+    "Pituitary Tumor"
+  ],
+  "trainingTimestamp": "2026-09-03 14:47:42 UTC"
+}

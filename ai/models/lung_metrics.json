@@ -1,0 +1,14 @@
+{
+  "scanType": "Chest X-Ray",
+  "modelArchitecture": "DenseNet121 Transfer Learning CNN",
+  "accuracy": 95.56,
+  "precision": 96.08,
+  "recall": 95.56,
+  "f1Score": 95.54,
+  "classes": [
+    "Benign (Normal Lung Tissue)",
+    "Lung Adenocarcinoma",
+    "Lung Squamous Cell Carcinoma"
+  ],
+  "trainingTimestamp": "2026-09-03 14:50:56 UTC"
+}

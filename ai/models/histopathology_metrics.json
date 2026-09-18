@@ -1,0 +1,14 @@
+{
+  "scanType": "Histopathology",
+  "modelArchitecture": "DenseNet121 Transfer Learning CNN",
+  "accuracy": 97.78,
+  "precision": 97.78,
+  "recall": 97.78,
+  "f1Score": 97.78,
+  "classes": [
+    "Benign Histopathology Tissue",
+    "Malignant Carcinoma Cells",
+    "Dyskeratotic Abnormal Cells"
+  ],
+  "trainingTimestamp": "2026-09-03 14:54:40 UTC"
+}
