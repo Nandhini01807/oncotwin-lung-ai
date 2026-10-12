@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Bell, Check, CheckCheck, Clock, FileText, Brain, Calendar, Activity, AlertCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { API_BASE } from "../config/api";
 
 function NotificationBell() {
   const [notifications, setNotifications] = useState([]);
@@ -14,7 +15,7 @@ function NotificationBell() {
       const token = localStorage.getItem("token");
       if (!token) return;
 
-      const res = await fetch("http://localhost:5000/api/notifications/mine", {
+      const res = await fetch(`${API_BASE}/notifications/mine`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) {
@@ -48,7 +49,7 @@ function NotificationBell() {
     if (e) e.stopPropagation();
     try {
       const token = localStorage.getItem("token");
-      await fetch(`http://localhost:5000/api/notifications/${id}/read`, {
+      await fetch(`${API_BASE}/notifications/${id}/read`, {
         method: "PATCH",
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -62,7 +63,7 @@ function NotificationBell() {
   const markAllAsRead = async () => {
     try {
       const token = localStorage.getItem("token");
-      await fetch("http://localhost:5000/api/notifications/read-all", {
+      await fetch(`${API_BASE}/notifications/read-all`, {
         method: "PATCH",
         headers: { Authorization: `Bearer ${token}` }
       });

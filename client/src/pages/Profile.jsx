@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import { useAuth } from "../context/AuthContext";
+import { API_BASE } from "../config/api";
 import { 
   User, 
   Mail, 
@@ -70,8 +71,8 @@ function Profile() {
         if (!token) return;
 
         const endpoint = isDoctor 
-          ? "http://localhost:5000/api/doctors/profile"
-          : "http://localhost:5000/api/patients/profile";
+          ? `${API_BASE}/doctors/profile`
+          : `${API_BASE}/patients/profile`;
 
         const response = await fetch(endpoint, {
           headers: { Authorization: `Bearer ${token}` }
@@ -136,8 +137,8 @@ function Profile() {
       if (!token) throw new Error("Please login again.");
 
       const endpoint = isDoctor
-        ? "http://localhost:5000/api/doctors/profile"
-        : "http://localhost:5000/api/patients/profile";
+        ? `${API_BASE}/doctors/profile`
+        : `${API_BASE}/patients/profile`;
 
       const payload = isDoctor
         ? profileData

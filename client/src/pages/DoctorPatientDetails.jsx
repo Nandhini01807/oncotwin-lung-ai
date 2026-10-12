@@ -32,9 +32,7 @@ import {
   Legend
 } from "recharts";
 import axios from "axios";
-
-const API_BASE = "http://localhost:5000/api";
-const SERVER_BASE = "http://localhost:5000";
+import { API_BASE, SERVER_BASE } from "../config/api";
 
 function DoctorPatientDetails() {
   const { patientId } = useParams();

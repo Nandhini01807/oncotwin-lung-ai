@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { Activity, Bell, User, LogOut, ShieldCheck, Stethoscope } from "lucide-react";
+import { API_BASE } from "../config/api";
 
 import NotificationBell from "./NotificationBell";
 
@@ -15,7 +16,7 @@ function Navbar() {
     const checkEngineHealth = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await fetch("http://localhost:5000/api/digital-twin", {
+        const res = await fetch(`${API_BASE}/digital-twin`, {
           headers: token ? { Authorization: `Bearer ${token}` } : {}
         });
         // 200, 401, or 404 all indicate Node.js server is online

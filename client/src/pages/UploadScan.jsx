@@ -19,9 +19,7 @@ import {
 import Layout from "../components/Layout";
 import { useAuth } from "../context/AuthContext";
 import axios from "axios";
-
-const API_BASE = "http://localhost:5000/api";
-const SERVER_BASE = "http://localhost:5000";
+import { API_BASE, SERVER_BASE } from "../config/api";
 
 function UploadScan() {
   const { user } = useAuth();

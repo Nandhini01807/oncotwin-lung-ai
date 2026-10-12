@@ -43,6 +43,14 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "OK",
+    service: "OncoTwin Backend",
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Explicit 404 Handler identifying failing endpoint
 app.use((req, res) => {
   console.warn(`[404 Handler] Unmatched Route: ${req.method} ${req.originalUrl}`);

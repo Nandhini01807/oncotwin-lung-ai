@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { Users, UserPlus, ShieldAlert } from "lucide-react";
+import { API_BASE } from "../config/api";
 
 function AssignPatient() {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ function AssignPatient() {
       }
 
       const response = await fetch(
-        "http://localhost:5000/api/patients/unassigned",
+        `${API_BASE}/patients/unassigned`,
         {
           method: "GET",
           headers: {
@@ -85,7 +86,7 @@ function AssignPatient() {
       setAssigning(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/doctors/patients/assign",
+        `${API_BASE}/doctors/patients/assign`,
         {
           method: "POST",
           headers: {

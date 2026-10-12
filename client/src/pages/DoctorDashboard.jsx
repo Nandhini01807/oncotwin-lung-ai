@@ -2,6 +2,7 @@ import React, { useEffect, useState, useMemo, useCallback } from "react";
 import axios from "axios";
 import { Link, useLocation } from "react-router-dom";
 import Layout from "../components/Layout";
+import { API_BASE } from "../config/api";
 
 import {
   ShieldAlert,
@@ -38,7 +39,7 @@ function DoctorDashboard() {
       }
 
       const response = await fetch(
-        "http://localhost:5000/api/doctors/dashboard",
+        `${API_BASE}/doctors/dashboard`,
         {
           method: "GET",
           headers: {
@@ -81,7 +82,7 @@ function DoctorDashboard() {
       if (!token) return;
 
       await axios.delete(
-        `http://localhost:5000/api/doctors/patients/${patientId}`,
+        `${API_BASE}/doctors/patients/${patientId}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
+import { API_BASE } from "../config/api";
 
 function DoctorAssignPatient() {
 
@@ -38,7 +39,7 @@ function DoctorAssignPatient() {
             }
 
             const response = await fetch(
-                "http://localhost:5000/api/patients/unassigned",
+                `${API_BASE}/patients/unassigned`,
                 {
                     method: "GET",
                     headers: {
@@ -110,7 +111,7 @@ function DoctorAssignPatient() {
                 localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/doctors/patients/assign",
+                `${API_BASE}/doctors/patients/assign`,
                 {
                     method: "POST",
 

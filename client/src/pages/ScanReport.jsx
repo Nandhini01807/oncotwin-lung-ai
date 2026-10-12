@@ -19,9 +19,7 @@ import { useAuth } from "../context/AuthContext";
 import axios from "axios";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
-
-const API_BASE = "http://localhost:5000/api";
-const SERVER_BASE = "http://localhost:5000";
+import { API_BASE, SERVER_BASE } from "../config/api";
 
 function ScanReport() {
   const { id } = useParams();
